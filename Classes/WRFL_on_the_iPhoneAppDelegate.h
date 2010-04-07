@@ -7,13 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
-@interface WRFL_on_the_iPhoneAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
-    UIWindow *window;
-    UITabBarController *tabBarController;
+#define kSelectedTabDefaultsKey @"SelectedTab"
+
+#define kLastfmUsername @"LastfmUsername"
+#define kLastfmPassword @"LastfmPassword"
+
+
+@interface WRFL_on_the_iPhoneAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, UIAlertViewDelegate> {
+  UIWindow *window;
+  UITabBarController *tabBarController;
+  
+  NetworkStatus remoteHostStatus;
+	NetworkStatus internetConnectionStatus;
+	NetworkStatus localWiFiConnectionStatus;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+
+@property NetworkStatus remoteHostStatus;
+@property NetworkStatus internetConnectionStatus;
+@property NetworkStatus localWiFiConnectionStatus;
+
+
+- (void)reachabilityChanged:(NSNotification *)note;
+- (void)updateNetworkStatus;
+- (BOOL)isCarrierDataNetworkActive;
+- (BOOL)isWifiDataNetworkActive;
+- (void) displayNetworkConnectionStatus;
 
 @end
