@@ -37,6 +37,9 @@
 @property (nonatomic, retain) NSString * now_playing_url;
 @property (nonatomic, retain) NSString * submission_url;
 
+
+- (void) saveLoginWithUsername:(NSString*) lastfmUsername andPassword:(NSString*) lastfmPassword;
+
 - (void) login;
 - (void) loginCallback:(NSString *)identifier data:(id)data;
 - (void) handshakeCallback:(ASIHTTPRequest *)request;

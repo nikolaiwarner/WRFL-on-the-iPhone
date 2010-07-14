@@ -30,8 +30,8 @@
   // Resest the info displays
   [self setTitle:@"Listen"];
   nowPlayingInfoView.alpha = 0;
-  [self updateNowPlayingArtworkViewWithImage:[UIImage imageNamed:@"album_bg.png"]];
-	[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
+  [self updateNowPlayingArtworkViewWithImage:[UIImage imageNamed:@"album_bg"]];
+	[self setButtonImage:[UIImage imageNamed:@"playbutton"]];
   
 	// Add the volume control
 	MPVolumeView *volumeView = [[[MPVolumeView alloc] initWithFrame:volume.bounds] autorelease];
@@ -67,14 +67,14 @@
 		NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
 		if ([(AudioStreamer *)object isPlaying]) {
-			[self performSelector:@selector(setButtonImage:) onThread:[NSThread mainThread] withObject:[UIImage imageNamed:@"stopbutton.png"] waitUntilDone:NO];
+			[self performSelector:@selector(setButtonImage:) onThread:[NSThread mainThread] withObject:[UIImage imageNamed:@"stopbutton"] waitUntilDone:NO];
 		}
 		else
 		{
 			[audioStreamer removeObserver:self forKeyPath:@"isPlaying"];
 			[audioStreamer release];
 			audioStreamer = nil;      
-			[self performSelector:@selector(setButtonImage:) onThread:[NSThread mainThread] withObject:[UIImage imageNamed:@"playbutton.png"] waitUntilDone:NO];
+			[self performSelector:@selector(setButtonImage:) onThread:[NSThread mainThread] withObject:[UIImage imageNamed:@"playbutton"] waitUntilDone:NO];
 		}
     
 		[pool release];
@@ -244,13 +244,13 @@
 
     } else {
       // No Images
-      nowplaying.artwork = [UIImage imageNamed: @"album_bg.png"];
+      nowplaying.artwork = [UIImage imageNamed: @"album_bg"];
       [self updateNowPlayingArtworkViewWithImage:nowplaying.artwork];
     }    
     
   } else {
     // Fail
-    nowplaying.artwork = [UIImage imageNamed: @"album_bg.png"];
+    nowplaying.artwork = [UIImage imageNamed: @"album_bg"];
     [self updateNowPlayingArtworkViewWithImage:nowplaying.artwork];
   }
 

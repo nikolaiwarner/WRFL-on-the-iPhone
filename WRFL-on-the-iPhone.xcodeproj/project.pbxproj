@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,9 @@
 		6A1BB7AA112444C200DB9E1A /* FMEngineURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1BB7A5112444C200DB9E1A /* FMEngineURLConnection.m */; };
 		6A1BB7AB112444C200DB9E1A /* NSString+FMEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1BB7A7112444C200DB9E1A /* NSString+FMEngine.m */; };
 		6A1BB7BA1124D4A600DB9E1A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1BB7B91124D4A600DB9E1A /* Security.framework */; };
+		6A1BC7D311EDC03300512326 /* PlaylistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1BC7D211EDC03300512326 /* PlaylistView.xib */; };
+		6A1BC7D511EDC04700512326 /* ShowsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1BC7D411EDC04700512326 /* ShowsView.xib */; };
+		6A1BC7D711EDC07600512326 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1BC7D611EDC07600512326 /* SettingsView.xib */; };
 		6A1CDC6210F643EC00D6CFBE /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CDC6110F643EC00D6CFBE /* AudioStreamer.m */; };
 		6A1CDC6410F643FB00D6CFBE /* wrfl-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A1CDC6310F643FB00D6CFBE /* wrfl-logo.png */; };
 		6A1CDC6610F6460900D6CFBE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1CDC6510F6460900D6CFBE /* CFNetwork.framework */; };
@@ -72,6 +75,9 @@
 		6A1BB7A7112444C200DB9E1A /* NSString+FMEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FMEngine.m"; sourceTree = "<group>"; };
 		6A1BB7B91124D4A600DB9E1A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6A1BB7C11124D52500DB9E1A /* FMEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMEngine.h; sourceTree = "<group>"; };
+		6A1BC7D211EDC03300512326 /* PlaylistView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistView.xib; sourceTree = "<group>"; };
+		6A1BC7D411EDC04700512326 /* ShowsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowsView.xib; sourceTree = "<group>"; };
+		6A1BC7D611EDC07600512326 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
 		6A1CDC6010F643EC00D6CFBE /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
 		6A1CDC6110F643EC00D6CFBE /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
 		6A1CDC6310F643FB00D6CFBE /* wrfl-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wrfl-logo.png"; sourceTree = "<group>"; };
@@ -199,8 +205,11 @@
 				6AAFF879114ECE980078E1D1 /* stopbutton.png */,
 				6AAFF7A7114DB5B30078E1D1 /* album_bg.png */,
 				6A1CDC6310F643FB00D6CFBE /* wrfl-logo.png */,
-				282CCBFD0DB6C98000C4EA27 /* ListenView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
+				282CCBFD0DB6C98000C4EA27 /* ListenView.xib */,
+				6A1BC7D211EDC03300512326 /* PlaylistView.xib */,
+				6A1BC7D411EDC04700512326 /* ShowsView.xib */,
+				6A1BC7D611EDC07600512326 /* SettingsView.xib */,
 				8D1107310486CEB800E47090 /* WRFL_on_the_iPhone-Info.plist */,
 			);
 			name = Resources;
@@ -323,7 +332,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WRFL-on-the-iPhone" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* WRFL-on-the-iPhone */;
 			projectDirPath = "";
@@ -345,6 +354,9 @@
 				6AAFF7A8114DB5B30078E1D1 /* album_bg.png in Resources */,
 				6AAFF87A114ECE980078E1D1 /* playbutton.png in Resources */,
 				6AAFF87B114ECE980078E1D1 /* stopbutton.png in Resources */,
+				6A1BC7D311EDC03300512326 /* PlaylistView.xib in Resources */,
+				6A1BC7D511EDC04700512326 /* ShowsView.xib in Resources */,
+				6A1BC7D711EDC07600512326 /* SettingsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +432,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -433,7 +446,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};

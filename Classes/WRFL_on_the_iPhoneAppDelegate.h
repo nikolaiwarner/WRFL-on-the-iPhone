@@ -14,28 +14,27 @@
 #define kLastfmUsername @"LastfmUsername"
 #define kLastfmPassword @"LastfmPassword"
 
+@class Reachability;
 
 @interface WRFL_on_the_iPhoneAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, UIAlertViewDelegate> {
   UIWindow *window;
   UITabBarController *tabBarController;
   
-  NetworkStatus remoteHostStatus;
-	NetworkStatus internetConnectionStatus;
-	NetworkStatus localWiFiConnectionStatus;
+  Reachability* hostReach;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 
-@property NetworkStatus remoteHostStatus;
-@property NetworkStatus internetConnectionStatus;
-@property NetworkStatus localWiFiConnectionStatus;
 
+- (void) updateInterfaceWithReachability: (Reachability*) curReach;
 
-- (void)reachabilityChanged:(NSNotification *)note;
-- (void)updateNetworkStatus;
-- (BOOL)isCarrierDataNetworkActive;
-- (BOOL)isWifiDataNetworkActive;
-- (void) displayNetworkConnectionStatus;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+- (void)applicationDidBecomeActive:(UIApplication *)application;
+- (void)applicationWillResignActive:(UIApplication *)application;
+- (void)applicationDidEnterBackground:(UIApplication *)application;
+- (void)applicationWillEnterForeground:(UIApplication *)application;
+- (void)applicationWillTerminate:(UIApplication *)application;
+
 
 @end

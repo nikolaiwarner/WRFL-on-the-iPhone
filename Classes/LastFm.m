@@ -26,18 +26,18 @@
 
 
 
-- (void) saveLogin {
+- (void) saveLoginWithUsername:(NSString*) lastfmUsername andPassword:(NSString*) lastfmPassword {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-  [defaults setValue:lastfmUsername forKey:kLastfmUsername];
-  [defaults setValue:lastfmPassword forKey:kLastfmPassword];
+  [defaults setValue:lastfmUsername forKey:@"LastfmUsername"];
+  [defaults setValue:lastfmPassword forKey:@"kLastfmPassword"];
 }
 
 
 
 - (void) login {
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-  username = [defaults valueForKey:kLastfmUsername];
-  password = [defaults valueForKey:kLastfmPassword];
+  username = [defaults valueForKey:@"kLastfmUsername"];
+  password = [defaults valueForKey:@"kLastfmPassword"];
   
   if (isLoggedIn){
     NSLog(@"Logged IN: YES");
@@ -116,8 +116,6 @@
   NSString *responseString = [request responseString];
   
   NSLog(@"updateLastfmNowPlayingCallback:");
-  NSLog(responseString);
-  NSLog(session_id);
 }
 
 
@@ -140,8 +138,6 @@
   NSString *responseString = [request responseString];
   
   NSLog(@"scrobbleCallback:");
-  NSLog(responseString);
-  NSLog(session_id); 
 }
 
 
